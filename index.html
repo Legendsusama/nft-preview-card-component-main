@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet"> 
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .main {
+      width: 100%;
+      min-height: 100vh;
+      background-color: hsl(217, 54%, 11%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      width: 300px;
+
+      background-color: hsl(216, 50%, 16%);
+      font-family: 'Outfit', sans-serif;
+      box-sizing: border-box;
+      padding: 20px;
+      font-size: 15px;
+      border-radius: 15px;
+    }
+
+    .box .image {
+      position: relative;
+      height: 265px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .box .image img{
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .box .image .layer {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(hsla(178, 100%, 50%,0.3),hsla(178, 100%, 50%,0.3)), url("images/icon-view.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 0;
+      top: 265px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      
+    }
+
+    .box .image:hover .layer{
+      top: 0;
+    }
+
+    /* .box .image .layer:hover {
+      height: 100%;
+      background-color: orangered;
+    } */
+
+    
+
+    .box h3{
+      color: hsl(0, 0%, 100%);
+      padding: 15px 0 0 0;
+      transition: 0.3s;
+    }
+
+    .box p{
+      padding: 12px 0;
+      color: hsl(215, 51%, 70%);
+    }
+
+    .box .child{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+
+
+  
+
+    .box .child .days-left, .box .child .eth {
+      display: flex;
+      align-items: center;
+    }
+
+    .box .child .eth img {
+      width: 10px;
+      padding: 0 5px 0 0;
+    }
+
+    .box .child .days-left img{
+      width: 15px;
+      padding: 0 5px;
+    }
+
+    .box .child .eth {
+      color: hsl(178, 100%, 50%);
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: hsl(215, 51%, 70%);
+      margin: 12px 0;
+    }
+
+    .avatar{
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar img{
+      width: 30px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .box .avatar span p {
+      color: hsl(0, 0, 100%);
+      /* background-color: orange; */
+
+    }
+
+    .avatar-text span {
+      color: white;
+      transition: 0.3s;
+    }
+
+    .avatar-text span:hover, .box h3:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="main">
+
+    <div class="box">
+      <div class="image">
+        <img src="images/image-equilibrium.jpg" alt="">
+        <div class="layer"></div>
+      </div>
+      <h3>Equilibrium #3429</h3>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+
+      <div class="child">
+        <div class="eth">
+          <img src="images/icon-ethereum.svg" alt="">0.041 ETH
+        </div>
+
+        <div class="days-left"> 
+          <img src="images/icon-clock.svg" alt=""><p>3 days left</p>
+        </div>
+        
+      </div>
+
+      <div class="line"></div>
+
+      <div class="avatar">
+        <img src="images/image-avatar.png" alt="">
+        <p class="avatar-text" >Creation of <span>Jules Wyver</span></p>
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+</body>
+</html>
